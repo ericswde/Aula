@@ -1,0 +1,45 @@
+body {
+    background-image: url('./img/disney\ bg\ .jpeg');
+    background-size: cover; /* Ajusta a imagem para cobrir todo o fundo */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    background-position: center center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Faz a imagem de fundo ficar fixa durante o scroll */
+}
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Move o botão para a direita */
+    padding: 10px; /* Adiciona um pouco de espaçamento ao redor do contêiner */
+}
+
+#loginbutton {
+    width: 100px; /* Largura do botão */
+    height: 50px; /* Altura do botão */
+    background-color: black; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border-radius: 2px;
+    border: 1px solid white; /* Remover borda */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+}
+
+#loginbutton:hover {
+    background-color: rgb(255, 255, 255); /* Cor de fundo ao passar o mouse */
+    color: black;
+    border: 2px solid black;
+}
+
+.Logo {
+    display: block;
+    margin: 0 auto;
+    justify-content: center; 
+    padding: 10px; 
+    text-align: center;
+
+}
+
+.Texto1 {
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+
+}
