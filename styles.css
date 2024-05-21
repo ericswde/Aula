@@ -1,14 +1,22 @@
 body {
-    background-image: url('./img/disney\ bg\ .jpeg');
+    background-image: url('./img/disney bg .jpeg');
     background-size: cover; /* Ajusta a imagem para cobrir todo o fundo */
     background-repeat: no-repeat; /* Evita a repetição da imagem */
     background-position: center center; /* Centraliza a imagem */
     background-attachment: fixed; /* Faz a imagem de fundo ficar fixa durante o scroll */
-}
-.button-container {
+    font-family: Arial, sans-serif;
+    margin: 0;
     display: flex;
-    justify-content: flex-end; /* Move o botão para a direita */
-    padding: 10px; /* Adiciona um pouco de espaçamento ao redor do contêiner */
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 #loginbutton {
@@ -28,19 +36,104 @@ body {
     border: 2px solid black;
 }
 
-.Logo {
-    display: block;
-    margin: 0 auto;
-    justify-content: center; 
-    padding: 10px; 
+header {
+    width: 100%;
     text-align: center;
-
+    margin-bottom: 20px;
 }
 
-.Texto1 {
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    max-width: 150px; /* Ajuste a largura máxima da logo */
+    height: auto;    /* Mantém a proporção da logo */
+}
+
+.texto1, .texto2 {
+    text-align: center;
+    margin: 10px;
+}
+
+.texto1 {
     color: whitesmoke;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 800;
-    
+    font-size: 50px;
+}
 
+.texto2 {
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+}
+.Textostandard, .Textopremium {
+    text-align: center;
+    margin: 10px;
+}
+.Textostandard{
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+}
+.Textopremium{
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.package-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Espaçamento entre os grupos */
+}
+.package {
+    background-color: rgb(0, 225, 255);
+    border: none ;
+    border-radius: 8px;
+    width: 200px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s;
+    flex: 1 1 calc(33.333% - 40px); /* Ajuste flexível para 3 colunas */
+    box-sizing: border-box;
+    min-height: 50px;
+    font-size: 10px;
+}
+
+.package:hover {
+    transform: scale(1.05);
+}
+
+.package a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .package {
+        flex: 1 1 calc(50% - 40px); /* Ajuste para 2 colunas em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .package {
+        flex: 1 1 100%; /* Ajuste para 1 coluna em telas muito pequenas */
+    }
 }
